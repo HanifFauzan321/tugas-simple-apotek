@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <link rel="stylesheet" th:href="@{/css/style.css}">
+        <link rel="stylesheet" th:href="@{/css/add-obat.css}">
+
+    </head>
+
+    <body>
+        
+        <div class="form-container">
+            <h2>Tambah Obat</h2>
+            <form th:action="@{save-obat}" th:object="${obat}" method="POST">
+                <div class="form-group">
+                    <label for="nama">Nama Obat</label>
+                    <input type="text" th:field="*{name}" required>
+                </div>
+                <div class="form-group">
+                    <label for="harga">Harga</label>
+                    <input type="number" th:field="*{price}" required>
+                </div>
+                <div class="form-group">
+                    <label for="deskripsi">Deskripsi</label>
+                    <textarea id="deskripsi" name="deskripsi" th:field="*{description}" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Tambah Obat</button>
+            </form>
+        </div>
+        <button style="width: 45%; background-color: #4CAF50; color: white; padding: 10px 20px; margin: 10px 20px;">
+            <a style="background-color: transparent; color: white;" th:href="@{list-obat}">List Obat</a>
+        </button>
+    </body>
+</html>

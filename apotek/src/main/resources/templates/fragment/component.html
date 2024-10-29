@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <link rel="stylesheet" th:href="@{/css/style.css}">
+    </head>
+
+    <body>
+        <header th:fragment="header" class="header">
+            <div class="header-logo">Logo</div>
+            <nav class="header-nav">
+              <ul>
+                <li><a th:href="@{/ }">Home</a></li>
+                <li><a th:href="@{add-obat}">Add Obat</a></li>
+                <li><a th:href="@{list-obat}">List Obat</a></li>
+              </ul>
+            </nav>
+          </header>
+    </body>
+</html>

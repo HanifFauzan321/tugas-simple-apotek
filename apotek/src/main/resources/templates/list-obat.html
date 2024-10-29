@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <link rel="stylesheet" th:href="@{/css/style.css}">
+
+    </head>
+
+
+    <body>
+        <header th:replace="~{fragment/component::header}" ></header>
+
+        <h2 style="text-align: center; color: #333;">Daftar Produk</h2>
+        <button style="background-color: #4CAF50; color: white; padding: 10px 20px; margin: 10px 20px;">
+            <a style="background-color: transparent; color: white;" th:href="@{add-obat}">Add Obat</a>
+        </button>
+        <table style="width: 80%; margin: auto; border-collapse: collapse; font-family: Arial, sans-serif;">
+            <thead>
+                <tr style="background-color: #4CAF50; color: white;">
+                    <th style="border: 1px solid #dddddd; padding: 8px;">ID</th>
+                    <th style="border: 1px solid #dddddd; padding: 8px;">NAME</th>
+                    <th style="border: 1px solid #dddddd; padding: 8px;">PRICE</th>
+                    <th style="border: 1px solid #dddddd; padding: 8px;">DESCRIPTION</th>
+                    <th style="border: 1px solid #dddddd; padding: 8px;">ACTION</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each=" obat : ${obats}" style="background-color: #f2f2f2;">
+                    <td th:text="${obat.id}" style="border: 1px solid #dddddd; padding: 8px;"></td>
+                    <td th:text="${obat.name}" style="border: 1px solid #dddddd; padding: 8px;"></td>
+                    <td th:text="${obat.price}" style="border: 1px solid #dddddd; padding: 8px;"></td>
+                    <td th:text="${obat.description}" style="border: 1px solid #dddddd; padding: 8px;"></td>
+                    <td>
+                        <button style="background-color: #8d1313; color: white; padding: 10px 20px; margin: 10px 20px;">
+                            <a style="background-color: transparent; color: white;" th:href="@{delete-obat/{id}(id=${obat.id})}">Delete</a>
+                        </button>
+                    </td>
+                </tr>
+                
+            </tbody>
+        </table>
+
+
+    </body>
+</html>
