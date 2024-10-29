@@ -8,7 +8,7 @@ Proyek ini merupakan aplikasi CRUD sederhana untuk sistem manajemen apotek, memu
 
 ## Teknologi yang Digunakan
 
-- **Backend**: Java / Spring Boot (atau bahasa pemrograman pilihan Anda)
+- **Backend**: Java / Spring Boot 
 - **Frontend**: HTML, CSS 
 - **Database**: MySQL 
 
