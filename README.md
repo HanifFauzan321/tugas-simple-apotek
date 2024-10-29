@@ -1,6 +1,6 @@
 # CRUD Sederhana - Sistem Manajemen Apotek
 
-Proyek ini merupakan aplikasi CRUD sederhana untuk sistem manajemen apotek, memungkinkan pengguna untuk mengelola data obat, pelanggan, dan transaksi. Aplikasi ini bertujuan untuk memudahkan penyimpanan, pencarian, pengeditan, dan penghapusan data terkait apotek.
+Proyek ini merupakan aplikasi CRUD sederhana untuk sistem manajemen apotek, memungkinkan pengguna untuk mengelola data obat. Aplikasi ini bertujuan untuk memudahkan penyimpanan,  dan penghapusan data terkait obat.
 
 ## Fitur Utama
 - **Account**: Registrasi , Login 
